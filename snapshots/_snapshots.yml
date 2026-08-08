@@ -1,0 +1,21 @@
+version: 2
+
+snapshots:
+  - name: product_snapshot
+    columns:
+      - name: id
+        tests:
+          - unique:
+              config:
+                where: "dbt_valid_to is null"
+                severity: warn
+
+     # - name: category
+      #  tests:
+       # - unique:
+        #    config:
+         #     warn_if: ">1"
+          #    error_if: ">3"
+           #   store_failures: true
+        
+          

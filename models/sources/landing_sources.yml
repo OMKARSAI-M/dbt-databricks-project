@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: landing
+    database: databricks_dbt_testing_catalog  
+    schema: dbt_testing_schema  
+    tables:
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique:
+                  config: 
+                    severity: warn
+              - not_null:
+                  config: 
+                    severity: warn
+          - name: quantity
+            tests:
+              #- assert_non_negative
+              - dbt_utils.expression_is_true:
+                  expression: ">=0"
+          - name: unit_price
+            tests:
+              #- assert_non_negative
+              - dbt_utils.expression_is_true:
+                  expression: ">=0"
+      - name: products
+        columns:
+          - name: id
+            tests:
+              - unique:
+                  config: 
+                    severity: warn
+              - not_null:
+                  config: 
+                    severity: warn
+      - name: reviews
+        columns:
+          - name: id
+            tests:
+              - unique:
+                  config: 
+                    severity: warn
+              - not_null:
+                  config: 
+                    severity: warn
+      - name: users
+        columns:
+          - name: id
+            tests:
+              - unique:
+                  config: 
+                    severity: warn
+              - not_null:
+                  config: 
+                    severity: warn
+
