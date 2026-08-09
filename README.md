@@ -192,9 +192,14 @@ The Bronze layer stores raw data from the landing tables with minimal transforma
 Models:
 
 - bronze_orders
+  ![dbt Lineage](images/bronze_orders.png)
 - bronze_products
+  
+  ![dbt Lineage](images/bronze_prodcuts.png)
 - bronze_reviews
+  ![dbt Lineage](images/bronze_reviews.png)
 - bronze_users
+  ![dbt Lineage](images/bronze_users.png)
 
 Purpose:
 
