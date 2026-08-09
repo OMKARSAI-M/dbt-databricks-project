@@ -54,7 +54,7 @@ Gold Layer
 ## Data Lineage
 
 The project follows the Medallion Architecture shown below.
-![dbt Lineage](dbt_lineage.png)
+![dbt Lineage](images/dbt_lineage.png)
 
 ### Orders Pipeline
 
@@ -250,7 +250,7 @@ Transforms user information by
 The Gold layer contains analytics-ready models.
 
 ---
-![dbt Lineage](gold_2.png)
+![dbt Lineage](images/gold_2.png)
 ## gold_sales__daily
 
 Combines
@@ -274,7 +274,7 @@ This model can directly power BI dashboards.
 ---
 
 ## gold_avg_rating__daily
-![dbt Lineage](gold_1.png)
+![dbt Lineage](images/gold_1.png)
 Combines
 
 - Reviews
